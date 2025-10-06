@@ -75,6 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _Decrement() {
+    setState(() {
+      _counter--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -148,6 +154,18 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       //Bikin ngambang kayak absolut/fix
+      // floatingActionButton: FloatingActionButton(
+      //   heroTag: 0,
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
+      // floatingActionButton: FloatingActionButton(
+      //   heroTag: 1,
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -161,6 +179,12 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: _resetCounter,
             tooltip: 'Reset',
             child: const Icon(Icons.sync),
+          ),
+          SizedBox(height: 16),
+          FloatingActionButton(
+            onPressed: _Decrement,
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
           ),
         ],
       ),
