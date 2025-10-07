@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _Decrement() {
+  void _decrementCounter() {
     setState(() {
       _counter--;
     });
@@ -182,7 +182,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(height: 16),
           FloatingActionButton(
-            onPressed: _Decrement,
+            onPressed: _decrementCounter,
             tooltip: 'Decrement',
             child: const Icon(Icons.remove),
           ),
