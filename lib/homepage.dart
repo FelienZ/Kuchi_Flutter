@@ -156,24 +156,86 @@ class LowSection extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.all(12),
+          padding: EdgeInsets.all(20),
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'LOKASI LAINNYA',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              SizedBox(height: 10),
               Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        'assets/image/wisata-01.jpg',
-                        width: 120,
-                        height: 120,
+                      ClipRRect(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        child: Image.asset(
+                          'assets/image/ikn-1.jpg',
+                          width: 80,
+                          height: 80,
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        'Wisata IKN',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        child: Image.asset(
+                          'assets/image/ikon-1.jpeg',
+                          width: 80,
+                          height: 80,
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        'Wisata Patung Raja Jawa',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        child: Image.asset(
+                          'assets/image/logika.jpg',
+                          width: 80,
+                          height: 80,
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        'Pikir Secara Logika',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ],
                   ),
