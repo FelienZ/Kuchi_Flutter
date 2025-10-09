@@ -20,9 +20,15 @@ class MyApp extends StatelessWidget {
             TopSection(
               name: 'WISATAKU',
               location: 'Ciroyom, Bandung',
-              deskripsi: 'lorem wak',
+              deskripsi: 'kazu wisata',
+              deskripsi2: 'kuchi tour guide',
             ),
-            LowSection(),
+            LowSection(
+              judul: 'LOKASI LAINNYA',
+              teks1: 'Wisata IKN',
+              teks2: 'Wisata Patung Raja Java',
+              teks3: 'Pikir Secara Logika Ayo',
+            ),
           ],
         ),
       ),
@@ -36,11 +42,13 @@ class TopSection extends StatelessWidget {
     required this.name,
     required this.location,
     required this.deskripsi,
+    required this.deskripsi2,
   });
 
   final String name;
   final String location;
   final String deskripsi;
+  final String deskripsi2;
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +125,7 @@ class TopSection extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
                     Text(
-                      deskripsi,
+                      deskripsi2,
                       style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
                     Row(
@@ -149,7 +157,18 @@ class TopSection extends StatelessWidget {
 }
 
 class LowSection extends StatelessWidget {
-  const LowSection({super.key});
+  const LowSection({
+    super.key,
+    required this.judul,
+    required this.teks1,
+    required this.teks2,
+    required this.teks3,
+  });
+
+  final String judul;
+  final String teks1;
+  final String teks2;
+  final String teks3;
 
   @override
   Widget build(BuildContext context) {
@@ -162,7 +181,7 @@ class LowSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'LOKASI LAINNYA',
+                judul,
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
@@ -183,7 +202,7 @@ class LowSection extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        'Wisata IKN',
+                        teks1,
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -207,7 +226,7 @@ class LowSection extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        'Wisata Patung Raja Jawa',
+                        teks2,
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -231,7 +250,7 @@ class LowSection extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        'Pikir Secara Logika',
+                        teks3,
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
