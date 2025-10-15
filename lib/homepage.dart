@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'second_route.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         //ini Appbar + title pakai sama seperti di window
         // appBar: AppBar(title: const Text(appTitle)),
         body: Column(
-          //Keren Coy bikin Instance class masuk sini galo, jingok contoh di https://docs.flutter.dev/ui/layout/tutorial
+          //contoh di https://docs.flutter.dev/ui/layout/tutorial
           children: [
             TopSection(
               name: 'WISATAKU',
@@ -57,7 +58,6 @@ class TopSection extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 500,
-          //bingung ini aseli bikin Background Image
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/image/wisata-01.jpg'),
@@ -137,7 +137,15 @@ class TopSection extends StatelessWidget {
                             // shadowColor: const Color.fromARGB(255, 94, 3, 3),
                             // textStyle: TextStyle(color: Colors.white),
                           ),
-                          onPressed: () {},
+                          // Within the `FirstRoute` widget:
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                builder: (context) => const SecondRoute(),
+                              ),
+                            );
+                          },
                           child: Text(
                             'LEBIH BANYAK >',
                             style: TextStyle(color: Colors.white),
