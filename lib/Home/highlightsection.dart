@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuchi_flutter/Components/listwisata.dart';
 
 class Highlightsection extends StatelessWidget {
   const Highlightsection({
@@ -31,76 +32,19 @@ class Highlightsection extends StatelessWidget {
               SizedBox(height: 10),
               Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(15),
-                        ),
-                        child: Image.asset(
-                          'assets/image/ikn-1.jpg',
-                          width: 80,
-                          height: 80,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        teks1,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                  Listwisata(
+                    textDescription: teks1,
+                    imageUsed: 'assets/image/ikn-1.jpg',
                   ),
                   SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(15),
-                        ),
-                        child: Image.asset(
-                          'assets/image/ikon-1.jpeg',
-                          width: 80,
-                          height: 80,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        teks2,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                  Listwisata(
+                    textDescription: teks2,
+                    imageUsed: 'assets/image/ikon-1.jpeg',
                   ),
                   SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(15),
-                        ),
-                        child: Image.asset(
-                          'assets/image/logika.jpg',
-                          width: 80,
-                          height: 80,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        teks3,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                  Listwisata(
+                    textDescription: teks3,
+                    imageUsed: 'assets/image/logika.jpg',
                   ),
                 ],
               ),

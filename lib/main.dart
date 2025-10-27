@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const String appTitle = 'Kuchi Flutter';
     return MaterialApp(
-      //Ini Title Window
       title: appTitle,
       initialRoute: '/',
       routes: {
